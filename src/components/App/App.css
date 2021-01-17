@@ -341,7 +341,7 @@ body {
 
 @media only screen and (max-width: 768px) {
     .game--container .game--start .game--icon .ttt {
-        font-size: 80px
+        font-size: 100px
     }
 }
 
@@ -359,6 +359,7 @@ body {
 }
 
 .game--container .game--option .radio--wrap .custom--radio input[type=radio] {
+    display: none;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none
