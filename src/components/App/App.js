@@ -9,25 +9,28 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      gameState: 'start',
-      gameType: 'ai',
-    }
-
+      gameState: "start",
+      gameType: "ai",
+    };
   }
 
   gameStateHandler = (option) => {
     this.setState({
-      gameState: option
-    })
-  }
+      gameState: option,
+    });
+  };
 
   render() {
     return (
       <div className="App">
         <div className="game--container">
-          {(this.state.gameState === 'start') && <GameStart gameStateHandler={this.gameStateHandler}/> }
-          {(this.state.gameState === 'option') && <GameOption gameStateHandler={this.gameStateHandler}/> }
-          {(this.state.gameState === 'board') && <GameBoard /> }
+          {this.state.gameState === "start" && (
+            <GameStart gameStateHandler={this.gameStateHandler} />
+          )}
+          {this.state.gameState === "option" && (
+            <GameOption gameStateHandler={this.gameStateHandler} />
+          )}
+          {this.state.gameState === "board" && <GameBoard />}
           <GameBottom />
         </div>
       </div>
