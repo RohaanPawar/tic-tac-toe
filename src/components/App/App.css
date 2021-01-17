@@ -345,6 +345,13 @@ body {
     }
 }
 
+.game--container .game--start .centred {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
 .game--container .game--option .radio--wrap {
     width: 100%;
     max-width: 300px;
@@ -481,7 +488,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 0
+    padding: 10px 0;
+    background-color: #fff
 }
 
 .game--container .game--box .game--score .score li {

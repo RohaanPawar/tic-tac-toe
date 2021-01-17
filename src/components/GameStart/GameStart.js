@@ -26,7 +26,7 @@ class GameStart extends Component {
           to={{ opacity: 1 }}
           config={{ delay: 1000, duration: 400 }}>
           {(props) => (
-            <div style={props}>
+            <div style={props} className="centred">
               <h3 className="title bold">Choose your play mode</h3>
               <button className="btn btn-blue" onClick={this.triggerOnClick}>
                 with ai
