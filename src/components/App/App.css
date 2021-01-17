@@ -1,0 +1,519 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block
+}
+
+body {
+    line-height: 1
+}
+
+ol,
+ul {
+    list-style: none
+}
+
+blockquote,
+q {
+    quotes: none
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../../assets/fonts/Montserrat-Regular.eot");
+    src: url("../../assets/fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Montserrat-Regular.woff2") format("woff2"), url("../../assets/fonts/Montserrat-Regular.woff") format("woff"), url("../../assets/fonts/Montserrat-Regular.ttf") format("truetype"), url("../../assets/fonts/Montserrat-Regular.svg#Montserrat-Regular") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url("../../assets/fonts/Montserrat-Light.eot");
+    src: url("../../assets/fonts/Montserrat-Light.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/Montserrat-Light.woff2") format("woff2"), url("../../assets/fonts/Montserrat-Light.woff") format("woff"), url("../../assets/fonts/Montserrat-Light.ttf") format("truetype"), url("../../assets/fonts/Montserrat-Light.svg#Montserrat-Light") format("svg");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap
+}
+
+body {
+    font-family: 'Montserrat';
+    background-color: #f3f5f2
+}
+
+@font-face {
+    font-family: 'tictactoe';
+    src: url("../../assets/fonts/tictactoe.eot?rb3gt3");
+    src: url("../../assets/fonts/tictactoe.eot?rb3gt3#iefix") format("embedded-opentype"), url("../../assets/fonts/tictactoe.ttf?rb3gt3") format("truetype"), url("../../assets/fonts/tictactoe.woff?rb3gt3") format("woff"), url("../../assets/fonts/tictactoe.svg?rb3gt3#tictactoe") format("svg");
+    font-weight: normal;
+    font-style: normal;
+    font-display: block
+}
+
+[class^="ttt-"],
+[class*=" ttt-"] {
+    font-family: 'tictactoe' !important;
+    speak: never;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+.ttt-gear {
+    background: #85e5d0;
+    background: linear-gradient(220deg, #85e5d0 0%, #3173f6 100%);
+    background: -webkit-linear-gradient(220deg, #85e5d0 0%, #3173f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.ttt-gear:before {
+    content: "\e902"
+}
+
+.ttt-circle {
+    position: relative;
+    background: #ede182;
+    background: linear-gradient(220deg, #ede182 0%, #f86930 100%);
+    background: -webkit-linear-gradient(220deg, #ede182 0%, #f86930 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.ttt-circle:after {
+    content: '';
+    display: block;
+    box-shadow: 0 20px 20px 20px rgba(248, 105, 48, 0.3);
+    width: 40%;
+    border-radius: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.ttt-circle:before {
+    content: "\e900"
+}
+
+.ttt-x-mark {
+    position: relative;
+    background: #85e5d0;
+    background: linear-gradient(220deg, #85e5d0 0%, #3173f6 100%);
+    background: -webkit-linear-gradient(220deg, #85e5d0 0%, #3173f6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent
+}
+
+.ttt-x-mark:after {
+    content: '';
+    display: block;
+    box-shadow: 0 20px 20px 20px rgba(49, 115, 246, 0.3);
+    width: 40%;
+    border-radius: 100%;
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%)
+}
+
+.ttt-x-mark:before {
+    content: "\e901"
+}
+
+.title {
+    font-size: 20px;
+    color: #2c446a;
+    margin-bottom: 50px;
+    font-weight: 600
+}
+
+.title.bold {
+    font-weight: bold
+}
+
+.btn {
+    width: 100%;
+    max-width: 230px;
+    border-radius: 30px;
+    padding: 15px 10px;
+    text-transform: uppercase;
+    border: none;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    color: #2d456b;
+    background-color: #fff;
+    transition: 0.2s all;
+    font-size: 16px;
+    font-weight: 300
+}
+
+.btn:focus {
+    outline: 0;
+    border: 0;
+    box-shadow: none
+}
+
+.btn:active {
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.16)
+}
+
+.btn.btn-blue {
+    background-color: #3373f9;
+    color: #fff;
+    margin-bottom: 15px
+}
+
+.game--board {
+  width: calc(100% - 20%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column
+}
+
+.game--container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative
+}
+
+.game--container .game--start .game--icon {
+  margin-bottom: 60px
+}
+
+.game--container .game--start .game--icon .ttt {
+  font-size: 120px
+}
+
+.game--container .game--option .radio--wrap {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 45px
+}
+
+.game--container .game--option .radio--wrap .custom--radio {
+  width: 48%
+}
+
+.game--container .game--option .radio--wrap .custom--radio input[type=radio] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none
+}
+
+.game--container .game--option .radio--wrap .custom--radio .mark--wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column
+}
+
+.game--container .game--option .radio--wrap .custom--radio .mark--wrap .ttt {
+  font-size: 100px;
+  opacity: .5;
+  margin-bottom: 50px
+}
+
+.game--container .game--option .radio--wrap .custom--radio .mark--wrap .ttt::after {
+  width: 0;
+  box-shadow: none;
+  transition: .2 all ease-in-out
+}
+
+.game--container .game--option .radio--wrap .custom--radio .mark--wrap .mark {
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 3px solid #e5e9ea
+}
+
+.game--container .game--option .radio--wrap .custom--radio .mark--wrap .mark:after {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: .3s all ease-in-out
+}
+
+.game--container .game--option .radio--wrap .custom--radio input:checked+.mark--wrap .ttt {
+  opacity: 1
+}
+
+.game--container .game--option .radio--wrap .custom--radio input:checked+.mark--wrap .ttt.ttt-circle:after {
+  box-shadow: 0 20px 20px 20px rgba(248, 105, 48, 0.3);
+  width: 40%
+}
+
+.game--container .game--option .radio--wrap .custom--radio input:checked+.mark--wrap .ttt.ttt-x-mark:after {
+  box-shadow: 0 20px 20px 20px rgba(49, 115, 246, 0.3);
+  width: 40%
+}
+
+.game--container .game--option .radio--wrap .custom--radio input:checked+.mark--wrap .mark {
+  border: 3px solid #3b7df8
+}
+
+.game--container .game--option .radio--wrap .custom--radio input:checked+.mark--wrap .mark:after {
+  background-color: #3b7df8;
+  width: 14px;
+  height: 14px
+}
+
+.game--container .game--box .game--score {
+  width: 100%;
+  max-width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 35px
+}
+
+.game--container .game--box .game--score h4 {
+  font-size: 20px
+}
+
+.game--container .game--box .game--score .score {
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16);
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0
+}
+
+.game--container .game--box .game--score .score li {
+  padding: 0 15px;
+  font-size: 20px
+}
+
+.game--container .game--box .game--score .score li:first-child {
+  border-right: 1px solid #000
+}
+
+.game--container .game--box .box-main {
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: grid;
+  width: 300px;
+  height: 300px;
+  grid-template-columns: auto auto auto;
+  background-color: #fff
+}
+
+.game--container .game--box .box-main .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border: 1px solid #aaaaaa;
+  transition: background 0.2s ease-in-out
+}
+
+.game--container .game--box .box-main .box .ttt {
+  font-size: 65px
+}
+
+.game--container .game--box .box-main .box .ttt.ttt-x-mark:after,
+.game--container .game--box .box-main .box .ttt.ttt-circle:after {
+  bottom: 25px
+}
+
+.game--container .game--box .box-main .box:hover {
+  cursor: pointer;
+  background: #0ff30f
+}
+
+.game--container .game--box .box-main #box_0,
+.game--container .game--box .box-main #box_1,
+.game--container .game--box .box-main #box_2 {
+  border-top: none
+}
+
+.game--container .game--box .box-main #box_0,
+.game--container .game--box .box-main #box_3,
+.game--container .game--box .box-main #box_6 {
+  border-left: none
+}
+
+.game--container .game--box .box-main #box_6,
+.game--container .game--box .box-main #box_7,
+.game--container .game--box .box-main #box_8 {
+  border-bottom: none
+}
+
+.game--container .game--box .box-main #box_2,
+.game--container .game--box .box-main #box_5,
+.game--container .game--box .box-main #box_8 {
+  border-right: none
+}
+
+.game--container .game--bottom {
+  position: fixed;
+  bottom: 50px;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.game--container .game--bottom .gear--wrap {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.16);
+  padding: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+.game--container .game--bottom .gear--wrap:active {
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.16)
+}
+
+.game--container .game--bottom .gear--wrap:active .ttt-gear {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg)
+}
+
+.game--container .game--bottom .gear--wrap .ttt-gear {
+  font-size: 20px;
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg);
+  transition: .2s all ease-in-out
+}
