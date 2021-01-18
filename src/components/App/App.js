@@ -22,7 +22,7 @@ class App extends Component {
 
   
   render() {
-    const appHeight = window.innerHeight;
+    const appHeight = window.screen.availHeight;
     return (
       <div className="App">
         <div className="game--container" style={{height: appHeight}}>
