@@ -20,10 +20,12 @@ class App extends Component {
     });
   };
 
+  
   render() {
+    const appHeight = window.innerHeight;
     return (
       <div className="App">
-        <div className="game--container">
+        <div className="game--container" style={{height: appHeight}}>
           {this.state.gameState === "start" && (
             <GameStart gameStateHandler={this.gameStateHandler} />
           )}
